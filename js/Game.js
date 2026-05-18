@@ -81,7 +81,6 @@ export class Game {
 
         board.insertAdjacentHTML('beforeend', panelHTML);
 
-        // Gán sự kiện cho nút
         document.getElementById('btn-retry').onclick = () => {
             document.getElementById('result-overlay').remove();
             this.startGame(this.#id, this.#difficulty, this.#collection);
