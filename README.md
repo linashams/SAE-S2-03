@@ -21,7 +21,8 @@ Nous avons remplacé les boîtes de dialogue standards du navigateur par un pann
 - Gestion des États : Le contenu s'adapte dynamiquement selon l'issue de la partie (Victoire, Temps écoulé ou Abandon).
 - Options de Rejouabilité : L'intégration de boutons "Rejouer" (relance la logique sans rechargement) et "Accueil" permet une navigation fluide au sein de l'application.
 
-3.Ajout d'une nouvelle collection d'images(Cakes)
+3. Ajout d'une nouvelle collection d'images(Cakes)
+   
 Nous avons ajouter une nouvelle collection d’images au jeu sur le thème des cakes et pâtisseries 
 En plus des collections déjà présentes :
 voitures ;
