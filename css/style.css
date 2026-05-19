@@ -340,6 +340,17 @@ header h1 {
   box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
 }
 
+.btn-nivsuiv {
+  background-color: #FFC2E2;
+  color: #042553;
+  box-shadow: 0 4px 15px rgb(4, 37, 83);
+}
+
+.btn-nivsuiv:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+}
 
 .btn-home {
   background-color: #FFC2E2;

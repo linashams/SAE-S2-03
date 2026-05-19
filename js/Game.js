@@ -45,6 +45,18 @@ export class Game {
     }
 
     /**
+     * Calcule le niveau de difficulté suivant
+     * @param {number} current - Difficulté actuelle (4, 5, 6 ou 8)
+     * @returns {number|null} La difficulté suivante ou null si max
+     * @private
+     */
+    #getNextDifficulty(current) {
+        if (current === 4) return 5;
+        if (current === 5) return 6;
+        if (current === 6) return 8;
+        return null;
+    }
+    /**
      * Affiche l'écran de fin de partie avec les options "Rejouer" ou "Accueil"
      * @param {boolean} isWin - Indique si le joueur a gagné.
      * @param {boolean} [isAbandon=false] - Indique si la partie s'est terminée par un abandon.
@@ -66,12 +78,19 @@ export class Game {
             message = "Vous avez quitté la partie";
         }
 
+        //Constantes pour le bouton Niveau Suivant
+        const currentDiff = parseInt(this.#difficulty);
+        const nextDiff = this.#getNextDifficulty(currentDiff);
+        const showNextButton = isWin && nextDiff !== null;
+
         const panelHTML = `
         <div id="result-overlay" class="result-overlay">
             <div class="result-box">
                 <h2>${title}</h2>
                 <p>${message}</p>
                 <div class="panel-buttons">
+                
+                    ${showNextButton ? `<button class="btn-panel btn-nivsuiv" id="btn-niveau-suivant">Niveau Suivant</button>` : ''} 
                     <button class="btn-panel btn-restart" id="btn-retry">Rejouer</button>
                     <button class="btn-panel btn-home" id="id-accueil">Accueil</button>
                 </div>
@@ -80,6 +99,31 @@ export class Game {
     `;
 
         board.insertAdjacentHTML('beforeend', panelHTML);
+
+        if (showNextButton) {
+            const btnSuivant = document.getElementById('btn-niveau-suivant');
+            if (btnSuivant) {
+                btnSuivant.onclick = async () => {
+                    document.getElementById('result-overlay').remove();
+
+                    try {
+                        // Crée une nouvelle partie sur l'API avec la nouvelle difficulté
+                        const newId = await ApiService.createGame(document.querySelector('#pseudo')?.value || "Joueur", nextDiff);
+
+                        // Met à jour l'IHM
+                        this.#domManager.showGamePanel(document.querySelector('#pseudo')?.value || "Joueur", newId, `${nextDiff} paires`);
+
+                        // Relance le jeu
+                        this.startGame(newId, nextDiff, this.#collection);
+                    } catch (error) {
+                        console.error("Impossible de lancer le niveau suivant via l'API", error);
+                        // Secours si l'API ne répond pas
+                        this.startGame(this.#id + 1, nextDiff, this.#collection);
+                    }
+                };
+            }
+        }
+
 
         document.getElementById('btn-retry').onclick = () => {
             document.getElementById('result-overlay').remove();
