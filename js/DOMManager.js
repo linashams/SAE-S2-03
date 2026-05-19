@@ -23,6 +23,7 @@ export class DOMManager {
                 <label for="collection">Collection d'images :</label>
                 <select id="collection">
                     <option value="animals">Animaux</option>
+                    <option value="cakes">Patisseries</option>
                     <option value="cars">Voitures</option>
                     <option value="fruits">Fruits</option>
                 </select>
