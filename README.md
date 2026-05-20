@@ -20,7 +20,7 @@ Cette fonctionnalité a été conçue pour fournir des retours sensoriels imméd
 • timeout : Alerte sonore en cas de fin de chrono.
 - Objectif : Renforcer l'engagement de l'utilisateur et rendre le jeu plus vivant et interactif.
   
-2. Panneau de Résultat Interactif (Modal)
+2. Panneau de Résultat Interactif 
    
 Nous avons remplacé les boîtes de dialogue standards du navigateur par un panneau de fin de partie personnalisé, injecté dynamiquement dans le DOM.
 - Design Moderne : Utilisation d'un overlay semi-transparent avec un effet de flou (backdrop-filter: blur()) pour une esthétique épurée.
@@ -31,7 +31,7 @@ Nous avons remplacé les boîtes de dialogue standards du navigateur par un pann
 
    Ce bouton permet ainsi d'améliorer l'expérience utilisateur et de renforcer son engagement
 
-4. Ajout d'une nouvelle collection d'images(Cakes)
+4. Ajout d'une nouvelle collection d'images (Cakes)
    
 Nous avons ajouter une nouvelle collection d’images au jeu sur le thème des cakes et pâtisseries 
 En plus des collections déjà présentes :
@@ -39,5 +39,8 @@ voitures ;
 animaux ;
 fruits;
 Le joueur peut désormais sélectionner une collection “Cakes” depuis le menu déroulant du formulaire d’accueil.
-Cette collection ajoute plusieurs images de gâteaux et pâtisseries utilisées pour générer les cartes du plateau de jeu et ainsi varier l'expérience et renforcer l'univers kawaii de notre jeu
+Cette collection ajoute plusieurs images de gâteaux et pâtisseries utilisées pour générer les cartes du plateau de jeu et ainsi varier l'expérience et renforcer l'univers kawaii de notre jeu.
 
+5. Ajout d'un système de score dynamique
+
+Afin d'ajouter un aspect compétitif au jeu, nous avons implémenté un algorithme de calcul de score. Ce système récompense les joueurs en fonction de leur rapidité (temps restant) et du niveau de difficulté choisi. Cela augmente considérablement la rejouabilité de l'application sans complexifier l'architecture du code existant.
