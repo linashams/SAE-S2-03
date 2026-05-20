@@ -69,13 +69,20 @@ export class Game {
         if (!board) return;
 
         let title = isWin ? "Félicitations !" : "Temps écoulé !";
-        let message = isWin
-            ? `Vous avez gagné ! Temps restant :  ${this.#tempsRestant}s`
-            : "Dommage, vous n'avez pas réussi à temps";
+        let message = "";
 
-        if (isAbandon) {
+        if (isWin) {
+            const paires = parseInt(this.#difficulty)
+            const score = (this.#tempsRestant * 10) + (paires * 50);
+            message = `Vous avez gagné ! <br> 
+                   Temps restant : ${this.#tempsRestant}s <br>
+                   Score : ${score}`;
+        } else if (isAbandon) {
             title = "Abandonné !";
-            message = "Vous avez quitté la partie";
+            message = "Vous avez quitté la partie. <br> Score : <strong>0</strong>";
+        } else {
+            title = "Temps écoulé !";
+            message = "Dommage, vous n'avez pas réussi à temps. <br> Score : <strong>0</strong>";
         }
 
         //Constantes pour le bouton Niveau Suivant
@@ -111,10 +118,10 @@ export class Game {
                         const newId = await ApiService.createGame(document.querySelector('#pseudo')?.value || "Joueur", nextDiff);
 
                         // Met à jour l'IHM
-                        this.#domManager.showGamePanel(document.querySelector('#pseudo')?.value || "Joueur", newId, `${nextDiff} paires`);
+                        this.#domManager.showGamePanel(document.querySelector('#pseudo')?.value || "Joueur", newId.id, `${nextDiff} paires`);
 
                         // Relance le jeu
-                        this.startGame(newId, nextDiff, this.#collection);
+                        this.startGame(newId.id, nextDiff, this.#collection);
                     } catch (error) {
                         console.error("Impossible de lancer le niveau suivant via l'API", error);
                         // Secours si l'API ne répond pas
@@ -229,9 +236,9 @@ export class Game {
 
     // Gère le retournement d'une carte
     #handleFlip(card) {
-        this.#playSound('flip');
-
         if (this.#verrouillage || card.classList.contains('flip')) return;
+
+        this.#playSound('flip');
 
         card.classList.add('flip');
         this.#cartesRetournees.push(card);
