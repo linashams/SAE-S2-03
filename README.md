@@ -56,19 +56,15 @@ Un système de classement est mis en place. Ainsi, à la fin de la partie l'util
 8. Système de combo
 Lorsque l'utilisateur trouve plusieurs paire à la suite, son score augmente considéralement. Plus il enchaîne les paires, plus le score a une grande augmentation.
 
-9. Bouton indice
-
-Si l'utilisateur passe plus de 7 secondes sans trouver de paires, un bouton d'indice apparait. Si l'utilisateur appuie dessus, les cartes se retournet durant 1 seconde
-
-10. 2ème mode de jeu : le memori par paires de 4
+9. 2ème mode de jeu : le memori par paires de 4
 
 Un autre mode de jeu, proposant les mêmes fonctionnalités, est proposé. Cependant, l'utilisateur ne doit plus trouver deux cartes identiques mais 4 cartes identiques 
 
-11. 3ème mode de jeu : le crazy game
+10. 3ème mode de jeu : le crazy game
 
 Le jeu du memori est revisité ! on retrouve deux nouvelles cartes dans le jeu . une carte STOP qui arrête la partie si elle est retournée, une carte chrono qui rajoute du temps suplémentaires. 
 Lorsque l'utilisateur choisit ce mode de jeu, il est libre de sélectionner si les trois foctionnalités vont être présentes ou non durant la partie. En effet, en plus des deux nouvelles cartes présentes, une nouvelle  fonctionnalité qui entraîne un mélange de cartes toute les 15 secondes peut être également sélectionnée
 
-12. Des commentaires encourageants !
+11. Des commentaires encourageants !
 
 Lors de la partie, l'utilisateur reçoit divers commentaires en fonntion de ses agissements : qu'il se trompe sur une seule paire, qu'il enchaîne les erreurs ou qu'il trouve une ou plusieurs paires. Ainsi, il se sent encouragé et stimulé tout au long du jeu !
