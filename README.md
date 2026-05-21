@@ -68,3 +68,7 @@ Lorsque l'utilisateur choisit ce mode de jeu, il est libre de sélectionner si l
 11. Des commentaires encourageants !
 
 Lors de la partie, l'utilisateur reçoit divers commentaires en fonntion de ses agissements : qu'il se trompe sur une seule paire, qu'il enchaîne les erreurs ou qu'il trouve une ou plusieurs paires. Ainsi, il se sent encouragé et stimulé tout au long du jeu !
+
+12. Création d'avatar
+
+L'utilisateur crée son avatar. Il doit donc sélectionner le personnage et son accessoire. Chaque accessoire a un bonus : bonus de secondes, commencer la partie avec un score à 25 ou encore qu'une paire se retourne automatiquement au début de la partie.  
