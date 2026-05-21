@@ -71,4 +71,4 @@ Lors de la partie, l'utilisateur reçoit divers commentaires en fonntion de ses 
 
 12. Création d'avatar
 
-L'utilisateur crée son avatar. Il doit donc sélectionner le personnage et son accessoire. Chaque accessoire a un bonus : bonus de secondes, commencer la partie avec un score à 25 ou encore qu'une paire se retourne automatiquement au début de la partie.  
+L'utilisateur crée son avatar. Il doit donc sélectionner le personnage et son accessoire. Chaque accessoire a un bonus : bonus de secondes, commencer la partie avec un score à 25, qu'une paire se retourne automatiquement au début de la partie ou la possibilité de retourner toute les cartes en plein milieu de la partie. ces fonctions elles pourront être activités lorsque l'utilisateur cliquera sur l'emoticône de l'acessoire de son avatar 
