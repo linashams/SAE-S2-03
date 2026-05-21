@@ -68,3 +68,7 @@ Un autre mode de jeu, proposant les mêmes fonctionnalités, est proposé. Cepen
 
 Le jeu du memori est revisité ! on retrouve deux nouvelles cartes dans le jeu . une carte STOP qui arrête la partie si elle est retournée, une carte chrono qui rajoute du temps suplémentaires. 
 Lorsque l'utilisateur choisit ce mode de jeu, il est libre de sélectionner si les trois foctionnalités vont être présentes ou non durant la partie. En effet, en plus des deux nouvelles cartes présentes, une nouvelle  fonctionnalité qui entraîne un mélange de cartes toute les 15 secondes peut être également sélectionnée
+
+12. Des commentaires encourageants !
+
+Lors de la partie, l'utilisateur reçoit divers commentaires en fonntion de ses agissements : qu'il se trompe sur une seule paire, qu'il enchaîne les erreurs ou qu'il trouve une ou plusieurs paires. Ainsi, il se sent encouragé et stimulé tout au long du jeu !
