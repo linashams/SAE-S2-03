@@ -44,3 +44,27 @@ Cette collection ajoute plusieurs images de gâteaux et pâtisseries utilisées 
 5. Ajout d'un système de score dynamique
 
 Afin d'ajouter un aspect compétitif au jeu, nous avons implémenté un algorithme de calcul de score. Ce système récompense les joueurs en fonction de leur rapidité (temps restant) et du niveau de difficulté choisi. Cela augmente considérablement la rejouabilité de l'application sans complexifier l'architecture du code existant.
+
+6. Importation d'image à partir de la galerie
+
+L'utilisateur peut importer ses propres photos afin d'avoir un jeu totalement personnalisé.
+
+7. Système de classement
+
+Un système de classement est mis en place. Ainsi, à la fin de la partie l'utilisateur peut voir si il fait partie du top 3 des meilleurs scores obtenus par niveau.
+
+8. Système de combo
+Lorsque l'utilisateur trouve plusieurs paire à la suite, son score augmente considéralement. Plus il enchaîne les paires, plus le score a une grande augmentation.
+
+9. Bouton indice
+
+Si l'utilisateur passe plus de 7 secondes sans trouver de paires, un bouton d'indice apparait. Si l'utilisateur appuie dessus, les cartes se retournet durant 1 seconde
+
+10. 2ème mode de jeu : le memori par paires de 4
+
+Un autre mode de jeu, proposant les mêmes fonctionnalités, est proposé. Cependant, l'utilisateur ne doit plus trouver deux cartes identiques mais 4 cartes identiques 
+
+11. 3ème mode de jeu : le crazy game
+
+Le jeu du memori est revisité ! on retrouve deux nouvelles cartes dans le jeu . une carte STOP qui arrête la partie si elle est retournée, une carte chrono qui rajoute du temps suplémentaires. 
+Lorsque l'utilisateur choisit ce mode de jeu, il est libre de sélectionner si les trois foctionnalités vont être présentes ou non durant la partie. En effet, en plus des deux nouvelles cartes présentes, une nouvelle  fonctionnalité qui entraîne un mélange de cartes toute les 15 secondes peut être également sélectionnée
