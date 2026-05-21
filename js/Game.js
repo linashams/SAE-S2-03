@@ -244,6 +244,7 @@ export class Game {
         this.#cartesRetournees.push(card);
 
         if (this.#cartesRetournees.length === 2) {
+            this.#verrouillage = true;
             setTimeout(() => {
                 this.#checkCard();
             }, 500);
@@ -252,7 +253,6 @@ export class Game {
 
     // Vérifie si les deux cartes retournées forment une paire
     #checkCard() {
-        this.#verrouillage = true;
         const [card1, card2] = this.#cartesRetournees;
         const isMatch = card1.dataset.id === card2.dataset.id;
 
